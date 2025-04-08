@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@700&display=swap');
+
+html {
+  font-size: 10px;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Main content area */
+main {
+  flex: 3;
+}
+
+/* Nav bar styling */
+nav {
+  flex: 1;
+  background-color: #800000;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem;
+  background-color: #a00000;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #c00000;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 4px solid #800000;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+/* Paragraphs and text indent */
+section > h2 + p,
+section > h3 + p {
+  text-indent: 20px;
+}
+
+/* Lists */
+ul {
+  padding-left: 2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+li {
+  line-height: 1.6;
+  list-style-type: square;
+}
+
+/* Links */
+a:link,
+a:visited {
+  color: #800000;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #b30000;
+  text-decoration: none;
+}
+
+a:active {
+  background-color: #ffdddd;
+  color: #5a0000;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* External link icon */
+a[href^="http"]:after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('external-link-icon.png') no-repeat center center;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #800000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

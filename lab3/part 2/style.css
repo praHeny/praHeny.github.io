@@ -1,0 +1,52 @@
+/*
+Name: heny 
+File: style.css
+Date: 4 April 2025
+Styles a cool-looking box with shadows and gradients.
+*/
+
+html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+  }
+  
+  /* 🎨 Styling the cool box */
+  div {
+    width: 200px;
+    height: 200px;
+  
+    background-color: #e63946; /* Base color */
+    color: white;              /* Contrasting text color */
+    text-shadow: 1px 1px 2px black;
+  
+    font-size: 1.1rem; /* ~17.6px (1rem = 16px, so 1.1rem ≈ 17.6px) */
+    /* Comment: 1.1rem = 16px * 1.1 = 17.6px */
+  
+    text-align: center;
+    line-height: 200px; /* Vertically center text using line-height */
+  
+    border: 1px solid #c3273b; /* Slightly darker shade of base color */
+    border-radius: 10px;
+  
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  
+    /* 🕶️ Box shadows */
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.2),             /* Regular shadow */
+      inset 2px 2px 5px rgba(255, 255, 255, 0.3), /* Inner top-left white */
+      inset -2px -2px 5px rgba(0, 0, 0, 0.3);     /* Inner bottom-right black */
+  }
+  

@@ -1,0 +1,95 @@
+/*
+Name : Heny Prajapati
+File : mail.ja
+Date : 1st April
+Description : js file for silly_genetaro
+subject : web development
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Story Generator</title>
+    <style>
+        body {
+            font-family: helvetica, sans-serif;
+            width: 350px;
+            margin: auto;
+            text-align: center;
+            background: linear-gradient(to right, #ff69b4, #8a2be2); /* Pink to Purple Gradient */
+            color: white; /* Ensures text is readable */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        div {
+            padding-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+        .radio-group input {
+            accent-color: #fff;
+            transform: scale(1.3);
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #d64da3;
+        }
+        p {
+            background: rgba(255, 255, 255, 0.8);
+            color: #5e2612;
+            padding: 10px;
+            visibility: hidden;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="customname">Enter custom name:</label>
+        <input id="customname" type="text" placeholder="Enter a name">
+    </div>
+    
+    <div class="radio-group">
+        <label for="us">US</label>
+        <input id="us" type="radio" name="ukus" value="us" checked>
+        <label for="uk">UK</label>
+        <input id="uk" type="radio" name="ukus" value="uk">
+    </div>
+
+    <div>
+        <button id="randomize">Generate random story</button>
+    </div>
+
+    <p id="story">It was 94 Fahrenheit outside, so Willy the Goblin went for a walk. When they got to the soup kitchen, they stared in horror for a few moments, then spontaneously combusted. Bob saw the whole thing, but was not surprised — Willy the Goblin weighs 300 pounds, and it was a hot day.</p>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!-- Name : Heny Prajapati-->
+ <!--Lab 5-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bear Facts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Skip to main content for keyboard users -->
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <!-- Semantic navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Species</a></li>
+      <li><a href="#">Habitats</a></li>
+    </ul>
+  </nav>
+
+  <!-- Search form -->
+  <form role="search" aria-label="Site search">
+    <label for="search" class="sr-only">Search the site</label>
+    <input type="text" id="search" name="search" placeholder="Search..." />
+    <button type="submit">Go</button>
+  </form>
+
+  <!-- Main article -->
+  <main id="main">
+    <article>
+      <h1>Facts About Bears</h1>
+
+      <img src="bear.jpg" alt="A brown bear walking through a forest trail" />
+
+      <section>
+        <h2>About Bears</h2>
+        <p>Bears are large mammals that inhabit forests, mountains, and tundras across the world. They are omnivores and are known for their strength, intelligence, and adaptability.</p>
+      </section>
+
+      <section>
+        <h2>Types of Bears</h2>
+        <ul>
+          <li>Grizzly Bear</li>
+          <li>Polar Bear</li>
+          <li>Black Bear</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Bear Sounds</h2>
+        <audio controls>
+          <source src="bear-sound.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <p><strong>Transcript:</strong> Growls and roars from different bear species recorded in the wild.</p>
+      </section>
+
+      <section>
+        <h2>Bear Populations by Region</h2>
+        <table>
+          <caption class="sr-only">Bear population estimates by region</caption>
+          <thead>
+            <tr>
+              <th scope="col">Region</th>
+              <th scope="col">Estimated Population</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">North America</th>
+              <td>200,000</td>
+            </tr>
+            <tr>
+              <th scope="row">Europe</th>
+              <td>25,000</td>
+            </tr>
+            <tr>
+              <th scope="row">Asia</th>
+              <td>150,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Leave a Comment</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" />
+
+          <label for="comment">Comment:</label>
+          <input id="comment" name="comment" type="text" />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Comments</h2>
+        <button id="toggleComments">Show Comments</button>
+        <div id="comments" hidden>
+          <p><strong>Sarah:</strong> Bears are fascinating creatures!</p>
+          <p><strong>Mike:</strong> I never knew there were so many species.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleComments");
+    const commentSection = document.getElementById("comments");
+
+    toggleBtn.addEventListener("click", () => {
+      const isHidden = commentSection.hasAttribute("hidden");
+      if (isHidden) {
+        commentSection.removeAttribute("hidden");
+        toggleBtn.textContent = "Hide Comments";
+      } else {
+        commentSection.setAttribute("hidden", "");
+        toggleBtn.textContent = "Show Comments";
+      }
+    });
+
+    toggleBtn.addEventListener("keypress", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        toggleBtn.click();
+      }
+    });
+  </script>
+
+</body>
+</html>
